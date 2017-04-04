@@ -16,9 +16,11 @@
 + 使用`constexpr`来让编译器确定变量值是否是常量表达式
 
 ### chap03
+
 ##### string
 + 直接初始化 and 拷贝初始化
-```C++
+
+``` C++
 string s1 //默认是空串
 string s2(s1) // s2是s1的副本
 string s3 = s1
@@ -26,6 +28,22 @@ string s4("value")
 string s5 = "value"
 string s6(n, 'c')
 ```
+
+##### vector
++ 初始化
+
+``` c++
+vector<T> v1
+vector<T> v2(v1)
+vector<T> v3(n, val)
+vector<T> v4(n)
+vector<T> v4{a,b,c,...}
+vector<T> v5={a,b,c,...}
+```
+
++ 不允许通过下标来添加元素
+
+
 
 ### const
 `const` 用于声明变量是不可以改变的，因此必须初始化，由编译器进行全局替换
